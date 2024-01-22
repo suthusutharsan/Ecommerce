@@ -14,10 +14,10 @@ class UsersController extends Controller
                 ->first();
     
         if($user){
-            return response()->json(["message" => "Login Success"]);
+            return response()->json(["message" => "Login Success"],200);
         }
         else{
-            return response()->json(["message" => "Login Failed"]);
+            return response()->json(["message" => "Login Failed"],401);
         }
     }
     
